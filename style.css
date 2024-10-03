@@ -1,0 +1,368 @@
+/*min-width targets screens above px chosen, Ex. min-width 800px, 800 and above, any width greater than 800 than changes*/
+/*max-width targets the px used and less. Ex. max-width 768px, 0 up to 768px any width under 768 is targeted anything more is not*/
+/*Web response screen Width x Length*/
+ /*settings for cell screens only_REMOVE THIS, double check reponse points*/
+/*page 442, HTML5 elements that render inline style changed to display block style for older web browsers*/
+header, section, footer, aside, nav, article, figure, figcaption {
+    display: block;
+  }
+
+body {
+    color: #bab9b9;
+    background-image: url(../rootfolder_mvc/wp12681885-smoke-cloud-wallpapers_4x_2.jpg);
+    background-position:center;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 1.4em; /*expands length of page*/
+    padding-left: 0%; /*shifts page from left by percent, margin shifts and drops slight difference*/
+    margin: 0%; /*this creates space from start/edge of page to give it some space*/
+  /*drops start of entire page downward*/  
+}
+
+/*Width of page*/
+.wrapper {
+  background-color: #000000;
+  width: 1000px; /*sets width of page*/ /*wrapper incorrect div in html caused huge width issues be careful here*/
+  margin: 0% auto 0% auto; /*controls position of ENTIRE wrapper,1st number top, 2nd number right use auto to center 3rd number bottom 4th number left use auto to center*/
+  border: 3px solid #ff0000;  /*can create long unwanted red border far across screen*/
+  
+}/*double check pixel and percentages*/
+
+.container {/*THE MARQUEE*/
+  display:none;
+  align-items: center; /*Items are positioned at the center of the container*/
+  height: 100;
+  overflow: visible; 
+  
+}
+
+header { 
+  height: 200px; /*change header size so that larger pics can been seen fully*/
+  
+  width: 99.9%;
+   
+    padding: 1.0px; /*expands height of header photos*/
+    /*background-image: url(../rootfolder_mvc/photos/Banner/mshvssf_banner.jpg/../ssf2_gmc_banner_7.jpg);*/
+    animation-name: animate;
+    background-size:cover;
+    background-image: url(../Reimagine_3_cellphone/photos/Banner/mvc_collection_banner1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 5s;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-timing-function: ease;
+    animation-duration: 90s; /*time it takes to complete photo cycle in sync and fade effect to begin*/
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-delay: 5s; /*delays 1st animation only not for following photos*/
+    /*animation: fade-inout 5s infinite alternate*/
+}
+
+/*Header transition fade and opacity*/
+@keyframes animate{
+  5%{ opacity: 1;  background-image: url(../Reimagine_3_cellphone/photos/Banner/capcom_fighting_collection_2_banner-950_215.jpg);}
+
+  10%{ opacity: 1;  background-image: url(../rootfolder_mvc/photos/Banner/mshvssf_banner_smaller.jpg);}
+
+  15%{ opacity: 1;  background-image: url(../rootfolder_mvc/photos/Banner/sf2_banner_img_2.jpg);}
+  
+  20%{ opacity: 1;  background-image: url(../rootfolder_mvc/photos/Banner/Mortal-Kombat-1_banner_ed1.jpg);}
+
+  25%{ opacity: 1;  background-image: url(../rootfolder_mvc/photos/Banner/28_cvsbanner_4x_banner_jpg.jpg);}
+
+  30%{ opacity: 1;  background-image: url(../rootfolder_mvc/photos/Banner/samsho4_4x_banner.jpg);}
+
+  35%{ opacity: 1;  background-image: url(../rootfolder_mvc/photos/Banner/mvc1_banner1.jpg);}
+
+  40%{ opacity: 1;  background-image: url(../rootfolder_mvc/photos/Banner/marvel-vs.-capcom-2_4x_banner.png);}
+
+  45%{ opacity: 1;  background-image: url(../rootfolder_mvc/photos/Banner/x-men-vs-streetfighter_marquee_4x_banner.jpg);}
+
+  50%{ opacity: 1;  background-image: url(../rootfolder_mvc/photos/Banner/ssbu_banneer_950_215.jpg);}
+
+  55%{ opacity: 1;  background-image: url(../rootfolder_mvc/photos/Banner/sf3s_banner_1.jpg);}
+
+  60%{ opacity: 1;  background-image: url(../rootfolder_mvc/photos/Banner/tatsunoko\ vs\ capcom_4x_banner_jpg.jpg);}
+
+ /*65%{ background-image: url(../photos/Banner/Mortal-Kombat-1_banner_ed1.jpg);}*/
+
+ 
+
+  70%{ opacity: 1;  background-image: url(../rootfolder_mvc/photos/Banner/dfv1_950_215.jpg);}
+
+  75%{ opacity: 1;  background-image: url(../rootfolder_mvc/photos/Banner/mvc_collection_banner1.png);}
+
+  80%{ opacity: 1;  background-image: url(../rootfolder_mvc/photos/Banner/tekken-8_950_215.jpg);}
+
+  85%{ opacity: 1;  background-image: url(../rootfolder_mvc/photos/Banner/ggs_ban_950_215.jpg);}
+
+}
+
+
+h1 {
+  text-indent: -9999px;
+  width: 940px;
+  height: 130px;
+  margin: 0px;
+}
+
+/*navagation bar*/
+nav {
+  clear: both;
+  color: #fff;
+  background-color: #9a03c4;
+  height: 30px; /*the vertical height of the nav bar enlarges or shrink*/
+  position:relative;
+  top: 97%;
+  margin-left: -0.1%;
+}
+
+nav ul {
+  margin: 0px;
+  padding: 5px 0px 5px 30px; /*control spacing between home games movelist about */
+}
+
+/*This will line the home contact games about etc navagation words horizontally*/
+nav li {
+  display: inline;
+  margin-right: 40px;/*also controls spacing between nav links*/
+  
+}
+
+/*Changes the unhover color of the nav bar font*/
+nav li a {
+  color: #fff;
+}
+
+/*when curser hovers nav bar the coded color will kick in*/
+nav li a:hover, nav li a.current {
+  color: #000;
+}
+
+section.courses { /*after coding sections.courses, footer no longer touches very bottom of page*/
+  /*unsure why but after refreshing at times the wrap and position is where it needs to be*/
+  float:left;
+  width: 720px; /*pushes section line wrapping text to the right more*/
+  border-right: 3px solid #eee;
+} /*the VERY thin border vertical line between profile and*/
+
+article {
+  clear: both;
+  overflow: auto;
+  width: 100%;
+}
+
+p.spacing {
+  margin: 2%;
+  line-height: 1.5; /*creates spacing needed between wrap sentences so they do not overlap*/
+}
+
+hgroup {
+  margin-top: 40px;
+}
+
+/* outter out box surrounding left jpegs*/
+/*big reason the wrapper is in mid of screen*/
+figure {
+  float: left;
+  width: 340px; /*controls border background behind photos width*/
+  height: 230px; /*controls border box height background behind photos*/
+  /* padding: 30px; */
+  margin: 20px; /*pushes picture down/right*/
+  /* border: 2px solid #eee; */ /*border creates a 2nd box shape causing uneven and bad spacing for players names for cellphone size*/
+}  
+
+/*font inside box with picture size weight color and position*/
+figcaption {
+  font-size: 100%;
+  font-weight: 600;
+  text-align: left;
+  color: #ff9f04;
+}
+
+/*move link section to the right, may not need this code*/
+aside {
+  width: 230px;
+  float: left;
+  padding: 0px 0px 0px 20px;
+}  
+
+/*gives side section the underlining bar*/
+aside section a {
+  display: block;
+  padding: 10px;
+  border-bottom: 2px solid #eee;
+  
+}
+
+/*Far right section colors when mouse hovers over words*/
+aside section a:hover {
+  color: #c500fc;
+  background-color: #0d0d0d;
+}
+
+/*right section neutural hyperlink colors*/
+a {
+  color: #edede9; 
+  text-decoration: none;
+}
+
+/*font above passage message size*/
+h1, h2, h3 {
+  font-weight:550;
+}
+
+/*main font above side section color and spacing*/
+aside h2 {
+  padding: 30px 0px 10px 0px;
+  color: #f39509;
+}
+
+/*changes favorite game list color*/
+h3 {
+  margin: 0px 0px 10px 0px;
+  color: #f39509;
+}
+
+/*main font above side section color and spacing*/
+aside h2 {
+  padding: 30px 0px 10px 0px;
+  color: #f39509;
+}
+
+footer {
+  clear: both;
+  color: #fff;
+  background-color: #9a03c4;
+  height: 30px;
+} /*the vertical height of the nav bar enlarges or shrink*/
+
+
+
+
+/*min-width targets screens above px chosen, Ex. min-width 1500px, any width greater than 1500 than changes*/
+/*max-width targets the px used and less. Ex. max-width 1200px, any width under 1200 is targeted anything more is not*/
+@media only screen and (min-width: 1000px) { /*settings for pc screen only*/
+  
+  body {
+    background-color: #f9f8f6;
+    background-image: url(../Reimagine_3_cellphone/photos/wp12681885-smoke-cloud-wallpapers_4x__3.jpg);
+    background-position: stretch ; /*9 variations, if 1 keyword used it default to center left..center..right..center*/
+    font-family:Arial, Helvetica, sans-serif;
+    margin: -30px; /*drops start of entire page downward*/
+  } 
+  
+  /*far right fixed photo ad*/
+  /* .image1 {
+  
+  position:fixed;
+  bottom: 350px;
+  right: -20px;
+  
+  } */
+
+   /*Width of page*/
+   .wrapper {
+    width: 1150px; /*sets width of page*/
+    margin: -15px auto 20px auto; /*controls position of ENTIRE wrapper,1st number top, 2nd number right use auto to center 3rd number bottom 4th number left use auto to center*/
+  }
+    
+  
+  .container { /*MARQUEE*/
+    display: flex;
+    align-items: center; /*Items are positioned at the center of the container*/
+    height: 90px; /*bottom of marquee background AND font adjust and pushes page down as px number goes up*/
+    overflow:hidden; /*removes page autoscroll issue*/
+    
+  }
+  
+  .scroll { /*Scroll codes is for Marquee*/
+    white-space: nowrap; /*whitespace will collapse into a single whitespace. Text will never wrap to the next line.*/
+    margin: 2.0em; /*increase or decrease gap space between marque and start of header*/
+    
+  }
+  
+  .scroll div {
+    display: flex;
+    gap: 2em;/*unsure what this code is doing*/
+    
+    
+  }
+  /*Marquee settings*/
+  .scroll p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color:#eee;
+    background-color: #0c0c0c;
+    margin-bottom: -2px; /*This brings the start of page and scroll marquee closer together*/
+    line-height: 55px; /* Brings text to the center of its border background during scroll*/
+    margin-top: 2px; /*increase top of scroll bar line*/
+
+  }
+  
+  .LeftToRight { /*marquee direction setup*/
+    animation: LeftToRight 45s infinite linear;
+   
+  }
+  
+  @keyframes LeftToRight {
+    0% {
+      transform: translate(0, 0);
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+    }
+    100% {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+  
+  header {
+      height: 250px;
+}
+  
+  nav {
+    height: 37px; /*the vertical height of the nav bar enlarges or shrink*/
+    margin-left: -1px; /*stretch nav bar to right or left*/
+    margin-right: -1px; /*shifts nav bar each direction*/
+  }
+  
+  section.courses {
+    width: 850px; /*pushes section line wrapping text to the right more*/
+    border-right: 1px solid #eee;
+  } /*the VERY thin border vertical line between profile and aside section*/
+  
+  /*outter out box surrounding left jpegs*/
+  figure {
+    width: 345px;
+    height: 257px;
+    padding: 5px;
+    border: 2px solid #eee;
+  } 
+  
+  /*font inside box with picture size weight color and position*/
+  figcaption {
+    font-size: 90%;
+  }
+  
+  /*move link section to the right*/
+  aside {
+    padding: 0px 0px 0px 30px;
+  } 
+  
+  h2 {
+    margin: 10px 0px 5px 0px;
+    padding: 0px
+  }
+  
+  /*very bottom of page spacing and font depth*/
+  footer {
+      font-size: 100%;
+      font-weight: 600;
+      padding: 7px 0px 0px 20px;
+      height: 40px
+       /*controls navagation header and footer height*/
+  }
+  
+}
